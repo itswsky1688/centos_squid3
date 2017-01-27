@@ -1,7 +1,7 @@
-Name
-## centos_squid3
+## Name
+centos_squid3
 
-Overview
+## Overview
 
 ## Description
 
