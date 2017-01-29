@@ -10,13 +10,11 @@ EXPOSE 3128
 ENV WAIT_S=3
 
 WORKDIR /app
-RUN echo "#!/bin/bash \n\
-/etc/init.d/squid start \n\
-sleep ${WAIT_S} \n\
-tail -f /var/log/squid/access.log \n\
-" >> startup.sh
+COPY startup.sh .
 RUN chmod +x startup.sh
 CMD "/app/startup.sh"
+
+COPY conf ./
 
 RUN htpasswd -c -b /etc/squid/squid-passwd user0001 password
 
