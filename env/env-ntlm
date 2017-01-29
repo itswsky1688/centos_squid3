@@ -1,0 +1,3 @@
+-e AUTH=ntlm
+-e WAIT_S=3
+-p 3130:3128
