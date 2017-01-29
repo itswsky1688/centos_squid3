@@ -29,4 +29,3 @@ push: check
 	-docker rmi $(REGISTRY)/$(NAME):$(VERSION) ; \
 	docker tag $(NAME):$(VERSION) $(REGISTRY)/$(NAME):$(VERSION)
 	docker push $(REGISTRY)/$(NAME):$(VERSION)
-
